@@ -27,7 +27,7 @@ const Hero = () => {
                 <span>{''}</span>
                 
             </div>
-            <button className='bg-[#17a2b8] w-56 rounded-md p-2 font-customFont font-semibold mx-auto hover:bg-[#468089]'>Connect Now</button>
+            <button className='bg-[#17a2b8] w-56 rounded-md p-2 md:text-lg text-xl font-customFont font-semibold mx-auto hover:bg-[#468089]'>Get Started</button>
         </div>
     </div>
   )
