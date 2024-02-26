@@ -30,7 +30,7 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     return (
-        <nav className='fixed mx-auto border-b border-l-transparent border-t-transparent top-0 left-0 right-0 z-10 bg-white opacity-100'>
+        <nav className='fixed mx-auto border-b border-l-transparent border-t-transparent top-0 left-0 right-0 z-20 bg-white opacity-100'>
             <div className='container mx-auto px-4 py-1'>
                 <div className='flex items-center justify-between'>
                     <Link href={'/'} className='text-2xl md:text-5xl text-white font-semibold'>

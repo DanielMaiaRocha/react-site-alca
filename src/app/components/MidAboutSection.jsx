@@ -7,7 +7,8 @@ const MidAboutSection = () => {
       <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3 relative z-10'>
         <div className='lg:col-span-2 mr-22 flex flex-col items-center lg:items-start'>
           <h1 className='text-5xl font-customFont font-semibold text-[#18e0ff]'>Who we are?</h1>
-          <p className='text-md sm:text-xl font-customFont font-semibold text-white my-6'>
+          {/* Responsive text size and margin for smaller screens */}
+          <p className='text-xl sm:text-lg font-customFont font-semibold text-white my-6 sm:my-3'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatem quia rerum, officia recusandae asperiores placeat quo et exercitationem similique!
           </p>
         </div>
