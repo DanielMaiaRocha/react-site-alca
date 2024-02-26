@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import Carrousel from "./components/Carrousel";
 import Clients from "./components/Clients";
 import Hero from "./components/Hero";
 import MidAboutSection from "./components/MidAboutSection";
@@ -13,6 +14,7 @@ export default function Home() {
         <AboutSection />
         <MidAboutSection />
         <Clients />
+        <Carrousel />
     </main>
   );
 }

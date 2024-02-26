@@ -13,7 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        customFont: ['"Anton"', "sans-serif"],
+        customFont: ['"Ubuntu"', "sans-serif"],
+        customFont2: ['"Patua One"', "sans-serif"],
       },
     },
   },

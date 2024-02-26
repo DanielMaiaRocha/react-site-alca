@@ -29,7 +29,7 @@ const Clients = () => {
                 <h2 className='text-2xl font-customFont font-bold text-[#17a2b8] text-center py-8'>Work Everywhere</h2>
                 <p className='text-lg font-customFont text-[#97969d] font-bold text-center py-4'>With our plataform, after you get all the needs for the begin the project, you gains acess to our very own virtual studio, with everything for make the best project ever.</p>
                 <p className='text-lg font-customFont text-[#97969d] font-bold text-center py-4'>Work everywhere with the same quality of a presencial studio</p>
-                <button className='text-lg font-customFont font-bold rounded-md bg-[#1772b8] hover:bg-[#468089] my-6 mx-auto px-6 py-3'>See more</button>
+                <button className='text-lg font-customFont font-bold rounded-md bg-[#17a2b8] hover:bg-[#468089] my-6 mx-auto px-6 py-3'>See more</button>
             </div>
               <div className='w-full border-2 rounded-md shadow-xl flex flex-col p-4 m-0 md:m-4 hover:scale-105 duration-200'>
                 <Image
