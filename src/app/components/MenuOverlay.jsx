@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Navlink from './NavLink'
+import Navlink from './NavLink.jsx'
 
 const MenuOverlay = ({ links }) => {
   return (

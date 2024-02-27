@@ -2,8 +2,8 @@
 import React,{useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navlink from './NavLink';
-import MenuOverlay from './MenuOverlay';
+import Navlink from './NavLink.jsx';
+import MenuOverlay from './MenuOverlay.jsx';
 
 
 const navLinks = [
