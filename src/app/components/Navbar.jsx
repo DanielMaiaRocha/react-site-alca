@@ -26,8 +26,13 @@ const navLinks = [
 
 ];
 
+
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+
+const handleLoginButtonClick = () => {
+    window.location.href = "/login"; 
+};    
 
     return (
         <nav className='fixed mx-auto border-b border-l-transparent border-t-transparent top-0 left-0 right-0 z-20 bg-white opacity-100'>
@@ -42,7 +47,7 @@ const Navbar = () => {
                         />
                     </Link>
                     <div className='menu hidden md:block md:w-auto'>
-                        <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 m-0 justify-center font-oswald font-semibold text-lg'>
+                        <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 m-0 justify-center font-sans font-bold text-xl'>
                             {navLinks.map((link, index) => (
                                 <li key={index}>
                                     <Navlink href={link.path} title={link.title} />
@@ -66,7 +71,7 @@ const Navbar = () => {
                         )}
                     </div>
                     <div>
-                        <button className='bg-[#17a2b8] hover:bg-[#468089] rounded-full text-white font-semibold w-20 p-1'>
+                        <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
                             Login
                         </button>
                     </div>

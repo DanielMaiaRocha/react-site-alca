@@ -1,5 +1,10 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+
+const handleLoginButtonClick = () => {
+  window.location.href = "/login"; 
+};  
 
 const AboutSection = () => {
   return (
@@ -17,7 +22,7 @@ const AboutSection = () => {
             <p className='text-xl md:text-lg font-semibold font-customFont text-[#454343] mx-auto p-4 py-7'>
               Its simple! Create your account, search for all you needs, make your own casting, schedule an appointment in our system, and start your project with all suport that we give.
            </p>
-           <button className='bg-[#17a2b8] w-56 rounded-md p-2 md:text-lg text-xl font-customFont font-semibold mx-auto my-5 hover:bg-[#468089]'>Get Started</button>
+           <button onClick={handleLoginButtonClick} className='bg-[#17a2b8] w-56 rounded-md p-2 md:text-lg text-xl font-customFont font-semibold mx-auto my-5 text-white hover:bg-[#468089]'>Get Started</button>
           </div>
         </div>
     </div>

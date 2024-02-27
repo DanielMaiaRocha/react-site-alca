@@ -2,14 +2,18 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
+const handleLoginButtonClick = () => {
+    window.location.href = "/login"; 
+};  
+
 const Hero = () => {
   return (
     <div className='bg-[url("/images/fundo.png")]'>
         <div className='max-w-[800px] mt-[-30px] w-full h-screen mx-auto text-center flex flex-col justify-center p-1'>
-            <h1 className='md:text-8xl sm:text-7xl text-7xl font-bold font-customFont '>Dub<span className='text-[#17a2b8]'>ber</span></h1>
+            <h1 className='md:text-8xl sm:text-7xl text-7xl font-bold font-customFont text-white'>Dub<span className='text-[#17a2b8]'>ber</span></h1>
             <div className='p-1 mt-2 mb-5 py-4'>
                 <TypeAnimation 
-                    className=' md:text-2xl sm:text-lg text-xl font-semibold '
+                    className=' text-white md:text-2xl sm:text-lg text-xl font-semibold '
                     style={{
                         height: '200px',
                         width: '800px',
@@ -27,7 +31,7 @@ const Hero = () => {
                 <span>{''}</span>
                 
             </div>
-            <button className='bg-[#17a2b8] w-56 rounded-md p-2 md:text-lg text-xl font-customFont font-semibold mx-auto hover:bg-[#468089]'>Get Started</button>
+            <button onClick={handleLoginButtonClick} className='bg-[#17a2b8] w-56 rounded-md p-2 md:text-lg text-xl font-customFont font-semibold mx-auto text-white hover:bg-[#468089]'>Get Started</button>
         </div>
     </div>
   )
