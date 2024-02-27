@@ -12,26 +12,29 @@ const settings = {
   speed: 2000,
   autoplaySpeed: 1300,
   cssEase: "linear",    
+  breakpoint: 1024,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
       }
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 1
       }
     }
   ]
@@ -39,11 +42,11 @@ const settings = {
 
 const Carrousel = () => {
   return (
-    <div className="max-w-sreen=lg mx-auto ">
+    <div className="relative max-w-sreen=lg mx-auto w-full ">
         <h1 className='mx-auto justify-center text-[black] font-bold font-sans text-5xl flex p-2 border-b-8 rounded-sm border-[#17a2b8]'>
           Customers
         </h1>
-        <div className='px-4 md:px-0'>
+        <div className='relative px-4 md:px-0 block pt-30 pt-md-0'>
             <Slider {...settings} className='p-7 max-w-[1240px] mx-auto'> 
                 <div className="mx-2">
                 <img className="w-[150px] h-[100px] object-contain mx-auto" src="/images/netflix.png" alt="" />
