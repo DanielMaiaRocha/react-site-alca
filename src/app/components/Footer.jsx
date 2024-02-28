@@ -22,8 +22,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className='md:flex-1 flex flex-col gap-3 justify-center mb-5'>
-                <h1 className='text-[#17a2b8] text-3xl font-sans font-bold text-center gap-4'>Trusted Partners:</h1>
-                <div className='flex flex-row justify-center gap-5'>
+                <div className='flex flex-row justify-center gap-20'>
                     <Image 
                         src={"/images/ega1.jpg"}
                         alt='/'

@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Navlink from './NavLink';
+import Navlink from './Navlink';
 import MenuOverlay from './MenuOverlay';
 
 
