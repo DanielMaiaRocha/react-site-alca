@@ -20,7 +20,7 @@ const MidAboutSection = () => {
           />
         </div>
       </div>
-      <video className='w-full h-80 object-cover absolute top-0 left-0 z-0' src='/video/videobg.mp4' autoPlay loop muted></video>
+      <video className='w-full h-80 object-cover absolute top-0 left-0 z-0' src='/video/videobg.mp4' autoPlay loop muted controlsList="nodownload nodisplayfullscreen"></video>
     </div>
   );
 }
