@@ -8,6 +8,13 @@ export default async function POST(req) {
   try {
     const { name, email, password, confirmPassword } = await req.json();
 
+    if (password !== confirmPassword) {
+      return NextResponse.json({
+        error: "Password and confirmPassword do not match",
+        status: 400,
+      });
+    }
+
     await connect();
 
     const emailExists = await User.findOne({ email });
