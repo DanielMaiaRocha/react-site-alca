@@ -1,14 +1,18 @@
+import CadastroForm from '@/app/components/CadastroForm'
+import Footer from '@/app/components/Footer'
+import Navbar from '@/app/components/Navbar'
 import React from 'react'
-import Navbar from '../components/Navbar'
-import CadastroForm from './CadastroForm'
+
+
 
 
 const page = () => {
   return (
     <main>
     <link rel="icon" href="/images/logo.png" sizes="any" />
-        <Navbar/>
+        <Navbar />
         <CadastroForm />
+        <Footer />
     </main>
   )
 }

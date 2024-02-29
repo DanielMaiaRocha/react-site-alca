@@ -1,13 +1,17 @@
+import Footer from '@/app/components/Footer'
+import LoginForm from '@/app/components/LoginForm'
+import Navbar from '@/app/components/Navbar'
 import React from 'react'
-import Navbar from '../components/Navbar'
-import LoginForm from './LoginForm'
+
+
 
 const page = () => {
   return (
     <main>
     <link rel="icon" href="/images/logo.png" sizes="any" />
-        <Navbar/>
+        <Navbar />
         <LoginForm />
+        <Footer />
     </main>
   )
 }

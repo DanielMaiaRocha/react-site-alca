@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-white">
       <link rel="icon" href="/images/logo.png" sizes="any" />
-        <Navbar/>
+        <Navbar />
         <Hero />
         <AboutSection />
         <MidAboutSection />

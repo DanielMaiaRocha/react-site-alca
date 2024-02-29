@@ -6,8 +6,8 @@ const MidAboutSection = () => {
     <div className='w-full py-16 relative'>
       <div className='max-w-[1240px] mx-auto grid lg:grid-cols-3 relative z-10'>
         <div className='lg:col-span-2 mr-22 flex flex-col items-center lg:items-start'>
-          <h1 className='text-5xl font-customFont font-semibold text-[#18e0ff]'>Who we are?</h1>
-          <p className='text-xl sm:text-lg font-customFont font-semibold text-white my-6 sm:my-3'>
+          <h1 className='text-5xl font-customFont3 font-semibold text-[#18e0ff]'>Who we are?</h1>
+          <p className='text-xl sm:text-lg font-customFont3 font-semibold text-white my-6 sm:my-3'>
             We are a group that leads the dubbing in Brasil, now, our goal is create a way to connect the best professinals worldwide and our solution for a remote dubbing without loosing the quality of the studio.
           </p>
         </div>
