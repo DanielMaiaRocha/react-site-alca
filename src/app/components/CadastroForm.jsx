@@ -26,11 +26,11 @@ const CadastroForm = () => {
       .email("E-mail incorrect")
       .required("E-mail field required"),
     password: Yup.string().required("Password field required"),
-    confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Password must mach').required('Confirm password field required'),
   })
 
-  async function handleSubmit (values, { resetForm }) {
-    setFormSubmitting(true)
+  async function handleSubmit(values, { resetForm }) {
+    setFormSubmitting(true);
+    
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
@@ -41,25 +41,36 @@ const CadastroForm = () => {
           name: values.name,
           email: values.email,
           password: values.password,
-          confirmPassword: values.confirmPassword,
         }),
       });
-      
+  
+      console.log("Response:", response);
       const result = await response.json();
-      console.log(result)
+      console.log("Result:", result);
+  
+      if (response.status === 201) {
+        alert(result.message);
+        router.push("/login");
+      } else {
+        renderError(result.message);
+        resetForm();
+      }
+  
+      setFormSubmitting(false);
     } catch (error) {
-      setFormSubmitting(false)
-      renderError("Fail to create an account, try again latter!")
-    }
-
-      function renderError(msg) {
-        setError(msg)
-        setTimeout(() => {
-          setError("");
-      }, 3000)
+      console.error("Error:", error);
+      setFormSubmitting(false);
+      renderError("Error creating account, please try again later!");
     }
   }
+  
 
+  function renderError(msg) {
+    setError(msg);
+    setTimeout(() => {
+      setError("");
+    }, 3000);
+  }
   return (
     <main className='min-h-screen flex flex-grow items-center justify-center'>
       <Formik 
@@ -83,7 +94,6 @@ const CadastroForm = () => {
             <LoginInput name="name" placeholder="Ex: Quentin Tarantino" required />
             <LoginInput name="email" type="email" placeholder="Your best e-mail" required />
             <LoginInput name="password" type="password" placeholder="A password that you will remember!" required />
-            <LoginInput name="confirmPassword" type="password" placeholder="Confirm your password" label="Confirm Password" required />
             <ButtonLogin
               type="submit"
               text={isFormSubmitting ? "Loading..." : "Register"}

@@ -1,21 +1,13 @@
-import User from "@/app/models/User"; 
+import User from "@/app/models/User";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import connect from "@/app/utils/db";
 import mongoose from "mongoose";
 
-export default async function POST(req) {
+await connect();
+export async function POST(req) {
   try {
-    const { name, email, password, confirmPassword } = await req.json();
-
-    if (password !== confirmPassword) {
-      return NextResponse.json({
-        error: "Password and confirmPassword do not match",
-        status: 400,
-      });
-    }
-
-    await connect();
+    const { name, email, password} = await req.json();
 
     const emailExists = await User.findOne({ email });
 
@@ -36,7 +28,6 @@ export default async function POST(req) {
 
     await newUser.save();
 
-  
     await mongoose.connection.close();
 
     return NextResponse.json({
@@ -44,6 +35,7 @@ export default async function POST(req) {
       status: 201,
     });
   } catch (error) {
+    console.error("Error during registration:", error);
     return NextResponse.json({
       error: "An error has been caught, failed to register the user",
       status: 500,
