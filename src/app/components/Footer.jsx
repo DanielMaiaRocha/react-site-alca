@@ -1,5 +1,23 @@
 import Image from 'next/image'
 import React from 'react'
+import FooterLink from './FooterLinks'
+
+const footerLinks = [
+    {
+        title: "Website",
+        path: "/"
+    },
+
+    {
+        title: "System",
+        path: "https://alcateia.dubsol.app/login.php"
+    },
+
+    {
+        title: "About",
+        path: "/"
+    },
+]
 
 const Footer = () => {
   return (
@@ -16,9 +34,11 @@ const Footer = () => {
             <div className="md:flex-1 flex flex-col gap-3 justify-center mb-5">
                 <h1 className='text-3xl text-[#17a2b8] font-sans font-bold text-center'>Links:</h1>
                 <ul className='text-lg font-sans font-semibold flex flex-col text-center'>
-                    <li>Website</li>
-                    <li>System</li>
-                    <li>About</li>
+                  {footerLinks.map((link, index) =>(
+                    <li key={index}>
+                        <FooterLink href={link.path} title={link.title} />
+                    </li>
+                  ))}
                 </ul>
             </div>
             <div className='md:flex-1 flex flex-col gap-3 justify-center mb-5'>
