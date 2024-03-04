@@ -10,11 +10,11 @@ import { useSession } from 'next-auth/react';
 const navLinks = [
     {
         title: "Home",
-        path: "/",
+        path: "/mainPage",
     },
     {
-        title: "About",
-        path: "#about",
+        title: "My Profile",
+        path: "/myProfile",
     },
     {
         title: "Services",
@@ -27,7 +27,7 @@ const navLinks = [
 
 ];
 
-const Navbar = () => {
+const AuthNavbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
 const { data: session } = useSession
 const handleLoginButtonClick = () => {
@@ -86,4 +86,4 @@ const handleLoginButtonClick = () => {
     );
 };
 
-export default Navbar;
+export default AuthNavbar;

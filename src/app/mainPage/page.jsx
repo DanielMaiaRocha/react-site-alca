@@ -1,14 +1,12 @@
 import React from 'react'
 import LayoutAdmin from '../components/LayoutAdmin'
+import AuthNavbar from '../components/AuthNavBar'
 
 function page() {
   return (
     <LayoutAdmin> 
     <main className='min-h-screen flex justify-center pt-6'>
-            <h1>Home page</h1>
-        <button>
-            Sair
-        </button>
+        <AuthNavbar />
     </main>
     </LayoutAdmin>
   )
