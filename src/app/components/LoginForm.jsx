@@ -1,12 +1,12 @@
 "use client"
 import { Form, Formik } from 'formik'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LoginInput from './LoginInput'
 import ButtonLogin from './ButtonLogin'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Yup from 'yup'
-import { signIn } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
 const LoginForm = () => {
@@ -14,6 +14,17 @@ const LoginForm = () => {
   const [error, setError] = useState("")
   const [isFormSubmitting, setFormSubmitting] = useState(false)
   const router = useRouter()
+  const { status } = useSession()
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/mainPage");
+    }
+  }, [status, router]);
+  
+  if (status !== "unauthenticated") {
+    return null;
+  }
 
   const initialValues = {
     email: "",

@@ -38,6 +38,10 @@ const options = NextAuth({
     })],
     pages: {
         error:"/login"
+    },
+    session: {
+        jwt: true,
+        maxAge: 30 * 20 * 60 * 60,
     }
 });
 

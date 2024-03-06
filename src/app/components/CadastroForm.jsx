@@ -1,18 +1,30 @@
 "use client"
 import { Form, Formik } from 'formik'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LoginInput from './LoginInput'
 import ButtonLogin from './ButtonLogin'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Yup from 'yup'
 import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 
 const CadastroForm = () => {
   const [error, setError] = useState("")
   const [isFormSubmitting, setFormSubmitting] = useState(false)
-
   const router = useRouter();
+  const { status } = useSession()
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/mainPage");
+    }
+  }, [status, router]);
+  
+  if (status !== "unauthenticated") {
+    return null;
+  }
+  
   const initialValues = {
     name: "",
     email: "",

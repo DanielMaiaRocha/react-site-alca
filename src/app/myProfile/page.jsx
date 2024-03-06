@@ -6,9 +6,10 @@ function page() {
   return (
 
     <LayoutAdmin>
-    <main className='min-h-screen flex justify-center pt-6'>
-        <AuthNavbar />
-    </main>
+      <main className='min-h-screen flex justify-center pt-6'>
+      <link rel="icon" href="/images/logo.png" sizes="any" />
+          <AuthNavbar />
+      </main>
     </LayoutAdmin>
   )
 }

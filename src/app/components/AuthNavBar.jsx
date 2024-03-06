@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Navlink from './Navlink';
 import MenuOverlay from './MenuOverlay';
 import { useSession } from 'next-auth/react';
+import { ProfileIcon } from './ProfileIcon';
 
 
 const navLinks = [
@@ -17,8 +18,8 @@ const navLinks = [
         path: "/myProfile",
     },
     {
-        title: "Services",
-        path: "#services",
+        title: "Appointments",
+        path: "/appointment",
     },
     {
         title: "Contact",
@@ -28,8 +29,9 @@ const navLinks = [
 ];
 
 const AuthNavbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false);
-const { data: session } = useSession
+const [navbarOpen, setNavbarOpen] = useState(false);
+const { data: session } = useSession();
+const firstName = session ? session.user.name.split(' ')[0] : '';
 const handleLoginButtonClick = () => {
     window.location.href = "/login"; 
 };    
@@ -70,14 +72,17 @@ const handleLoginButtonClick = () => {
                             </button>
                         )}
                     </div>
-                    <div>
+                    <div className='flex flex-row'>
                     {session ? (
-                        <span className='text-xl'>{session.user.name}</span>
+                        <span className='text-xl font-semibold font-customFont3 mt-6 mr-4'>Olá, {firstName}</span>
                     ) : (
                         <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
                             Login
                         </button>
                     )}
+                    <div>
+                        <ProfileIcon />
+                    </div>
                     </div>
                 </div>
             </div>
