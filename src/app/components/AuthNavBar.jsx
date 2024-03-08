@@ -40,7 +40,7 @@ const handleLoginButtonClick = () => {
         <nav className='fixed mx-auto border-b border-l-transparent border-t-transparent top-0 left-0 right-0 z-20 bg-white opacity-100'>
             <div className='container mx-auto px-4 py-1'>
                 <div className='flex items-center justify-between'>
-                    <Link href={'/'} className='text-2xl md:text-5xl text-white font-semibold'>
+                    <Link href={'/mainPage'} className='text-2xl md:text-5xl text-white font-semibold'>
                         <Image
                             src="/images/logo.png"
                             width={70}
@@ -74,7 +74,7 @@ const handleLoginButtonClick = () => {
                     </div>
                     <div className='flex flex-row'>
                     {session ? (
-                        <span className='text-xl font-semibold font-customFont3 mt-6 mr-4'>Olá, {firstName}</span>
+                        <span className='text-xl  font-customFont3 mt-6 mr-4'>Hello, {firstName}</span>
                     ) : (
                         <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
                             Login

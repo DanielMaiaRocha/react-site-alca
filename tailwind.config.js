@@ -15,7 +15,8 @@ module.exports = {
       fontFamily: {
         customFont: ['"Ubuntu"', "sans-serif"],
         customFont2: ['"Patua One"', "sans-serif"],
-        customFont3: ['"Barlow"', "sans-serif"]
+        customFont3: ['"Barlow"', "sans-serif"],
+        customFont4: ['"Bebas Neue"', "sans-serif"]
       },
     },
   },

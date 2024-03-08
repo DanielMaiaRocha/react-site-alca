@@ -8,14 +8,14 @@ import React from 'react'
 
 const page = () => {
   return (
-  <LayoutAdmin>
+ 
     <main>
     <link rel="icon" href="/images/logo.png" sizes="any" />
         <Navbar />
         <LoginForm />
         <Footer />
     </main> 
-    </LayoutAdmin>
+    
   )
 }
 

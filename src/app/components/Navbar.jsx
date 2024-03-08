@@ -74,7 +74,7 @@ const handleLoginButtonClick = () => {
                     {session ? (
                         <span className='text-xl'>{session.user.name}</span>
                     ) : (
-                        <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
+                        <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-20 md:w-36 p-1'>
                             Login
                         </button>
                     )}

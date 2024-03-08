@@ -11,8 +11,7 @@ const createJwt = (user) => {
         email: user.email,
    
     };
-
-   
+    
     const encodedToken = JSON.stringify(token);
     return encodedToken;
 };
@@ -31,7 +30,7 @@ export default function LayoutAdmin({ children }) {
     if (!session) {
         setTimeout(() => {
             router.push("/login");
-        }, 9999999999);
+        }, 10);
         return <div>Redirecting to login...</div>;
     }
 
