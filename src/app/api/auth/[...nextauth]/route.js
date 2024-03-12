@@ -3,6 +3,7 @@ import NextAuth from "next-auth/next"
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs"
 import connect from "@/app/utils/db"
+import GoogleProvider from "next-auth/providers/google";
 
 const options = NextAuth({
     providers:[CredentialsProvider({
@@ -35,7 +36,12 @@ const options = NextAuth({
                 throw new Error(error)
             }
         },
-    })],
+    }),
+    GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET
+      })
+    ],
     pages: {
         error:"/login"
     },

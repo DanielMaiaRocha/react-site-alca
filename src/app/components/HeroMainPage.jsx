@@ -22,7 +22,7 @@ const HeroMainPage = () => {
                 alt='/'
                 width={2300}
                 height={2300}
-                className='w-[300px] h-[400px] md:w-[500px] md:h-[600px] rounded-md object-cover -mt-5 md:ml-[6rem]'
+                className='w-[300px] h-[400px] md:w-[500px] md:h-[600px] rounded-md object-cover mt-10 md:ml-[6rem]'
         />
         </div>
     </main>

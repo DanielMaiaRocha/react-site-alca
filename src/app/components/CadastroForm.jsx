@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Yup from 'yup'
 import { useRouter } from 'next/navigation'
-import { useSession } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 
 const CadastroForm = () => {
   const [error, setError] = useState("")
@@ -92,7 +92,7 @@ const CadastroForm = () => {
     }, 3000);
   }
   return (
-    <main className='min-h-screen flex flex-grow items-center justify-center'>
+    <main className='min-h-screen flex flex-grow items-center justify-center mt-10 mb-10'>
       <Formik 
       initialValues={initialValues} 
       validationSchema={validationSchema}
@@ -135,7 +135,33 @@ const CadastroForm = () => {
                   <span className="mx-4 text-md text-zinc-700 font-semibold font-customFont3">OR</span>
                 <div className="w-full border-t border-zinc-300"></div> 
               </div>
-              <span className='flex flex-col justify-center items-center mt-2 font-customFont3 font-bold text-lg text-zinc-700'>Sign-up with</span>             
+              <span className='flex flex-col justify-center items-center mt-2 font-customFont3 font-bold text-lg text-zinc-700'>Sign-up with</span>
+              <div className='flex justify-center items-center mt-4 gap-10'>
+                <button onClick={() => signIn('google')}>
+                  <Image 
+                    src={'/images/google.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+                <button>
+                  <Image 
+                    src={'/images/instagram.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+                <button>
+                  <Image 
+                    src={'/images/linkedin.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+              </div>          
             </div>
           </Form>
         )}

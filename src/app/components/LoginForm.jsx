@@ -101,6 +101,40 @@ const LoginForm = () => {
                 <Link href="/register"> Sign up!</Link>
               </strong>
             </span>
+            <div>
+              <div className="flex items-center mt-4">
+                <div className="w-full border-t border-zinc-300"></div>
+                  <span className="mx-4 text-md text-zinc-700 font-semibold font-customFont3">OR</span>
+                <div className="w-full border-t border-zinc-300"></div> 
+              </div>
+              <span className='flex flex-col justify-center items-center mt-2 font-customFont3 font-bold text-lg text-zinc-700'>Sign-In with</span>
+              <div className='flex justify-center items-center mt-4 gap-10'>
+                <button onClick={() => signIn('google')}>
+                  <Image 
+                    src={'/images/google.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+                <button>
+                  <Image 
+                    src={'/images/instagram.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+                <button>
+                  <Image 
+                    src={'/images/linkedin.svg'}
+                    alt='/'
+                    width={46}
+                    height={46}
+                  />
+                </button>
+              </div>          
+            </div>
           </Form>
         )}
       </Formik>
