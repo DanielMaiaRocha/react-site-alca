@@ -2,6 +2,8 @@ import React from 'react'
 import LayoutAdmin from '../components/LayoutAdmin'
 import AuthNavbar from '../components/AuthNavBar'
 import HeroMainPage from '../components/HeroMainPage'
+import FilterSection from '../components/FilterSection'
+import Footer from '../components/Footer'
 
 function page() {
   return (
@@ -11,6 +13,8 @@ function page() {
             <AuthNavbar />
             <HeroMainPage />
         </main>
+         <FilterSection />
+         <Footer />
       </LayoutAdmin>
     
   )
