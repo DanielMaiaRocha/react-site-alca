@@ -10,14 +10,16 @@ function FilterSection() {
                   <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </button>
-        <select className='border solid border-zinc-500 rounded-md p-1 w-72'>
-            <option value="#">aaaaaa</option>
-            <option value="#">aaaaaa</option>
-            <option value="#">aaaaaa</option>
-            <option value="#">aaaaaa</option>
-            <option value="#">aaaaaa</option>
-        </select>
-      </div>
+          <select className='border solid border-zinc-500 rounded-md p-1 w-72'>
+              <option value="#">Select a category: </option>
+              <option value="#">Dubbing Actor</option>
+              <option value="#">Production Menager</option>
+              <option value="#">Director</option>
+              <option value="#">Operator</option>
+              <option value="#">Translator</option>
+              <option value="#">Reviewer</option>
+          </select>
+      </div>    
     </main>
   );
 }
