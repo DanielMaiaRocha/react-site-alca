@@ -3,6 +3,7 @@ import LayoutAdmin from '../components/LayoutAdmin'
 import AuthNavbar from '../components/AuthNavBar'
 import ProfileFuncs from '../components/ProfileFuncs'
 import ProfileHero from '../components/ProfileHero'
+import Footer from '../components/Footer'
 
 function page() {
   return (
@@ -14,6 +15,7 @@ function page() {
           <ProfileFuncs />
           <ProfileHero />  
       </main> 
+      <Footer />
       
     </LayoutAdmin>
   )
