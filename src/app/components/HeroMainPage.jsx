@@ -7,9 +7,9 @@ const HeroMainPage = () => {
 
     <main className='grid grid-col-8 sm:grid-cols-2 items-center justify-center'>
         <div className='flex flex-col justify-center items-center ml-10 mt-10 md:ml-20'>
-            <h1 className='text-5xl md:text-7xl font-bold font-customFont4 mx-auto p-4'>DUB<span className='text-[#17a2b8] font-customFont3'>BER</span></h1>
+            <h1 className='text-5xl md:text-7xl font-bold font-customFont4 -ml-10 p-4'>DUB<span className='text-[#17a2b8] font-customFont3'>BER</span></h1>
             <p className='text-lg md:text-2xl text-zinc-700 font-semibold mx-auto py-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quaerat quia impedit voluptates rerum velit earum optio temporibus expedita placeat.</p>
-            <select className='text-lg md:text-lg text-zinc-700 mx-auto rounded border flex items-center justify-center border-black w-72 mr-[3.6rem] md:ml-10 md:w-96 '>
+            <select className='text-lg md:text-lg text-zinc-700 mx-auto rounded border flex items-center justify-center border-black w-72 mr-[4.3rem] md:ml-10 md:w-96 '>
               <option value="#">Select the project language</option>
               <option value="#">English</option>
               <option value="#">Portuguese</option>
