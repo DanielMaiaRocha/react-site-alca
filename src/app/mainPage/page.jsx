@@ -4,6 +4,7 @@ import AuthNavbar from '../components/AuthNavBar'
 import HeroMainPage from '../components/HeroMainPage'
 import FilterSection from '../components/FilterSection'
 import Footer from '../components/Footer'
+import Card from '../components/Card'
 
 function page() {
   return (
@@ -14,6 +15,7 @@ function page() {
             <HeroMainPage />
         </main>
          <FilterSection />
+         <Card />
          <Footer />
       </LayoutAdmin>
     

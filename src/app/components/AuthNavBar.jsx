@@ -74,7 +74,7 @@ const handleLoginButtonClick = () => {
                     </div>
                     <div className='flex flex-row'>
                     {session ? (
-                        <span className='text-xl  font-customFont3 mt-6 mr-4'>Hello, {firstName}</span>
+                        <span className='hidden md:flex text-xl font-customFont3 mt-6 mr-4'>Hello, {firstName}</span>
                     ) : (
                         <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
                             Login

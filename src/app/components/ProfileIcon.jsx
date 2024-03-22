@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { signOut } from 'next-auth/react';
 
+
 export const ProfileIcon = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
