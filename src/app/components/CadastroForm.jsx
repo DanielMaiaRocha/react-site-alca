@@ -116,11 +116,10 @@ const CadastroForm = () => {
             <LoginInput name="password" type="password" placeholder="A password that you will remember!" required />
             <LoginInput name="passwordMatch" type="password" label="Confirm your password" placeholder="Confirm your passaword" required />
             <ButtonLogin
-              type="submit"
-              text={isFormSubmitting ? "Loading..." : "Register"}
-              disabled={isFormSubmitting}
-              className="bg-[#17a2b8] rounded-md text-white font-customFont3 text-2xl font-bold w-full p-2 "
-            />
+                type="submit"
+                text={isFormSubmitting ? <AiOutlineLoading3Quarters className="animate-spin mr-2 w-9 h-9 font-bold" /> : "Register" }
+                className="bg-[#17a2b8] rounded-md text-white font-customFont3 text-2xl font-bold w-full p-2 flex justify-center items-center"
+            />  
             {!values.name && !values.password && !values.passwordMatch && error && (
               <span className='text-red-500 text-md text-center'>{error}</span>
             )}

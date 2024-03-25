@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Yup from 'yup'
 import { signIn, useSession } from 'next-auth/react'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { useRouter } from 'next/navigation'
 
 const LoginForm = () => {
@@ -89,10 +90,10 @@ const LoginForm = () => {
             <LoginInput name="email" type="email" placeholder="Your e-mail" required />
             <LoginInput name="password" type="password" placeholder="Your password" required />
             <ButtonLogin
-              type="submit"
-              text={isFormSubmitting ? "Loading..." : "Entrar" }
-              className="bg-[#17a2b8] rounded-md text-white font-customFont3 text-2xl font-bold w-full p-2"
-            />
+                type="submit"
+                text={isFormSubmitting ? <AiOutlineLoading3Quarters className="animate-spin mr-2 w-9 h-9 font-bold" /> : "Login" }
+                className="bg-[#17a2b8] rounded-md text-white font-customFont3 text-2xl font-bold w-full p-2 flex justify-center items-center"
+            />  
             {!values.email && !values.password && error && (
               <span className='text-red-500 text-lg text-center'>{error}</span>
             )}
