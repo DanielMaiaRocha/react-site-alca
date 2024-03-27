@@ -37,17 +37,9 @@ const options = NextAuth({
             }
         },
     }),
-    GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET
-      })
     ],
     pages: {
         error:"/login"
-    },
-    session: {
-        jwt: true,
-        maxAge: 30 * 20 * 60 * 60,
     }
 });
 
