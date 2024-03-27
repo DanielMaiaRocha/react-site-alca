@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as Yup from 'yup'
 import { useRouter } from 'next/navigation'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { signIn, useSession } from 'next-auth/react'
 
 const CadastroForm = () => {

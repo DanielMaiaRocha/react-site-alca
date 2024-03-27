@@ -1,5 +1,7 @@
 "use client"
 import { getSession, useSession } from "next-auth/react";
+import Image from "next/image";
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { useRouter } from "next/navigation";
 
 
@@ -23,7 +25,15 @@ export default function LayoutAdmin({ children }) {
 
 
     if (status === "loading") {
-        return <div>Loading...</div>;
+        return <div className="flex flex-col justify-center items-center mt-80 delay-500">
+                <Image 
+                    src={"/images/logo.png"}
+                    alt="/"
+                    width={200}
+                    height={200}
+                />
+                <AiOutlineLoading3Quarters className="animate-spin mr-2 w-9 h-9 font-bold"/>
+            </div>;
     }
 
 
@@ -31,7 +41,15 @@ export default function LayoutAdmin({ children }) {
         setTimeout(() => {
             router.push("/login");
         }, 10);
-        return <div>Redirecting to login...</div>;
+        return <div className="flex flex-col justify-center items-center mt-80 delay-500">
+        <Image 
+            src={"/images/logo.png"}
+            alt="/"
+            width={200}
+            height={200}
+        />
+        <AiOutlineLoading3Quarters className="animate-spin mr-2 w-9 h-9 font-bold"/>
+    </div>;
     }
 
     
