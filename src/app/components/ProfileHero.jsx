@@ -98,7 +98,7 @@ const ProfileHero = () => {
         )}
       </div>
       {videoPreview && (
-        <video className="w-[350px] h-[180px]  ml-[10px] flex flex-auto justify-center items-center">
+        <video controls className="w-[150px] h-[180px]  ml-[10px] flex flex-auto justify-center items-center">
           <source src={videoPreview} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

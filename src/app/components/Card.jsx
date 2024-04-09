@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Card = () => {
-  const [isRed, setIsRed] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
+  const [isRed, setIsRed] = useState(false);
 
   useEffect(() => {
     const handleOnlineStatus = () => {
@@ -26,9 +26,9 @@ const Card = () => {
 
   return (
     <div className='flex justify-center items-center -mt-20 mb-20 md:mr-96 md:mb-20 md:-mt-20'>
-      <div className={`border shadow-xl w-96 md:w-[60%] h-60 rounded-md relative`}>
+      <div className={`border shadow-xl w-96 md:w-[48%] h-60 rounded-md relative`}>
         <div className='absolute top-4 left-[10.8rem] md:top-6 md:left-[11.5rem] h-full w-10 flex items-center justify-center'>
-          <div className={`w-4 h-4 rounded-full ${isOnline ? 'bg-green-500 border-2 border-black' : ' border-2 border-black bg-gray-500'}`}></div>
+          <div className={`w-4 h-4 rounded-full ${isOnline ? 'bg-green-500' : 'bg-gray-500'}`}></div>
         </div>
         <div className='flex justify-end items-end mt-2 mr-1 md:mt-5 md:mr-3'>
           <button onClick={toggleColor}>
@@ -60,13 +60,13 @@ const Card = () => {
             alt='/'
             width={200}
             height={200}
-            className='rounded-md border-2 border-black'
+            className='rounded-md'
           />
           <div className='gap-2'>
             <h1 className='ml-3 text-xl font-customFont3 font-semibold'>Flavia Saddy</h1>
             <p className='ml-3 text-md text-zinc-400 font-customFont3'>Dubbing Actor/Director</p>
           </div>
-          <div className='flex flex-col justify-end -ml-[8rem] mr-2 -mb-[4.3rem] md:ml-20 md:-mb-[4rem] gap-3'>
+          <div className='flex flex-row h-9 mx-auto mt-40 md:mx-auto md:-mb-[4rem] gap-3'>
             <button className='bg-zinc-200 border shadow-lg  hover:bg-zinc-300 rounded-md w-32 p-1 text-lg font-medium'>Chat</button>
             <button className='bg-[#17a2b8] border shadow-lg  hover:bg-[#468089] rounded-md w-32 p-1 text-lg font-medium text-white'>Appoint</button>
           </div>
