@@ -9,9 +9,7 @@ import * as Yup from 'yup'
 import { signIn, useSession } from 'next-auth/react'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { useRouter } from 'next/navigation'
-import connect from '../utils/db'
 
-connect();
 
 const LoginForm = () => {
   
