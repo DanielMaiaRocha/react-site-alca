@@ -12,7 +12,6 @@ import { useRouter } from 'next/navigation'
 
 
 const LoginForm = () => {
-  
   const [error, setError] = useState("")
   const [isFormSubmitting, setFormSubmitting] = useState(false)
   const router = useRouter()
@@ -44,8 +43,8 @@ const LoginForm = () => {
     setFormSubmitting(true);
     
     try {
-      signIn("Credentials", {...values, redirect: false }).then(
-        ({error}) => {
+      signIn("Credentials", { ...values, redirect: false }).then(
+        ({ error  }) => {
           if(!error) {
             router.push("/mainPage");
           } else {
