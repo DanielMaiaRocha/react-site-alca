@@ -1,4 +1,4 @@
-import modelName from "@/app/models/User";
+import User from "@/app/models/User"
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -13,7 +13,7 @@ const options = NextAuth({
         await connect();
 
         try {
-          const user = await modelName.findOne({
+          const user = await User.findOne({
             email: credentials.email,
           });
 
