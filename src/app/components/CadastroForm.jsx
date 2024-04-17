@@ -9,6 +9,7 @@ import * as Yup from 'yup'
 import { useRouter } from 'next/navigation'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { signIn, useSession } from 'next-auth/react'
+import CustomAlert from './CustomAlert'
 
 const CadastroForm = () => {
   const [error, setError] = useState("")
@@ -69,8 +70,8 @@ const CadastroForm = () => {
       const result = await response.json();
       console.log("Result:", result);
   
-      if (response.status === 201) {
-        alert(result.message);
+      if (response.status === 200) {
+        loginAlert(result.message);
         router.push("/login");
       } else {
         renderError(result.message);
@@ -85,6 +86,10 @@ const CadastroForm = () => {
     }
   }
   
+  function loginAlert(message) {
+      <CustomAlert/>
+    alert(message)
+  }
 
   function renderError(msg) {
     setError(msg);

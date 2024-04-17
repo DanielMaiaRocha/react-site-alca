@@ -77,7 +77,7 @@ const LoginForm = () => {
         {({ values }) => (
           <Form
             noValidate
-            className='flex flex-col gap-2 p-4 rounded-md border border-zinc-300 max-w-[500px]  md:w-full md:h-auto mt-20 bg-white'
+            className='flex flex-col gap-2 p-4 rounded-md border border-zinc-300 max-w-[500px] md:w-full md:h-auto mt-32 mb-20 bg-white'
           >
             <div className='flex items-center justify-center'>
               <Image

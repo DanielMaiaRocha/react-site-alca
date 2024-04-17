@@ -26,10 +26,10 @@ const options = NextAuth({
             if (validPassword) {
               return user;
             } else {
-              throw new Error("Credenciais erradas!");
+              throw new Error("Email or password is wrong");
             }
           } else {
-            throw new Error("Credenciais erradas!");
+            throw new Error("Email or password is wrong");
           }
         } catch (error) {
           throw new Error(error);

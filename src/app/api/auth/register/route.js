@@ -40,5 +40,5 @@ export async function POST(req) {
       error: "An error has been caught, failed to register the user",
       status: 500,
     });
-  }
+  } 
 }
