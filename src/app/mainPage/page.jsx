@@ -15,7 +15,7 @@ function page() {
             <HeroMainPage />
         </main>
          <FilterSection />
-         <Card />
+         
          <Footer />
       </LayoutAdmin>
     
