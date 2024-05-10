@@ -10,9 +10,9 @@ function FilterSection() {
   };
   return (
     <main className='flex items-center justify-center mt-10 mb-10'>
-      <div className='flex flex-row gap-8'>
+      <div className='flex flex-row gap-5'>
         <h1 className='absolute left-[57rem] -mt-12 flex flex-col items-center justify-center  font-customFont3 text-3xl font-bold'>Filters</h1>
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white is'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                 src={'/images/microfon.png'}
                 alt={'/'}
@@ -21,7 +21,7 @@ function FilterSection() {
               />
               <span>Dubing Actor</span>
           </button>  
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                     src={'/images/menager.png'}
                     alt={'/'}
@@ -30,7 +30,7 @@ function FilterSection() {
                   />
               <span>Project Manager</span>
           </button>
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                     src={'/images/claquete.png'}
                     alt={'/'}
@@ -39,7 +39,7 @@ function FilterSection() {
                   />
               <span>Dubbing Director</span>
           </button>
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                     src={'/images/papel.png'}
                     alt={'/'}
@@ -48,7 +48,7 @@ function FilterSection() {
                   />
               <span>Revisor</span>
           </button>
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8]'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                     src={'/images/translator.png'}
                     alt={'/'}
@@ -58,7 +58,7 @@ function FilterSection() {
               <span>Translator</span>
               
           </button>
-          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer'> 
+          <button className='flex flex-col items-center justify-center mb-52 md:mt-10 border w-44 h-20 mx-auto md:ml-10 rounded-xl shadow-xl hover:-translate-y-1 hover:cursor-pointer hover:bg-[#17a2b8] hover:text-white'> 
               <Image 
                     src={'/images/operator.png'}
                     alt={'/'}

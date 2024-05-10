@@ -2,9 +2,9 @@ import React from 'react'
 import LayoutAdmin from '../components/LayoutAdmin'
 import AuthNavbar from '../components/AuthNavBar'
 import HeroMainPage from '../components/HeroMainPage'
-import FilterSection from '../components/FilterSection'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
+import CardSection from '../components/CardSection'
+
 
 function page() {
   return (
@@ -14,8 +14,7 @@ function page() {
             <AuthNavbar />
             <HeroMainPage />
         </main>
-         <FilterSection />
-         
+        <CardSection />
          <Footer />
       </LayoutAdmin>
     

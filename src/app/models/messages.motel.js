@@ -29,7 +29,7 @@ const userSchema = new Schema(
         type:String,
         required:true,
     },
-    lang:{
+    language:{
         type:String,
         required:true,
     },
