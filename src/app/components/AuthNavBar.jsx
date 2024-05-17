@@ -1,12 +1,11 @@
 "use client";
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navlink from './Navlink';
 import MenuOverlay from './MenuOverlay';
 import { useSession } from 'next-auth/react';
 import { ProfileIcon } from './ProfileIcon';
-
 
 const navLinks = [
     {
@@ -18,23 +17,29 @@ const navLinks = [
         path: "/myProfile",
     },
     {
-        title: "Appointments",
-        path: "/appointment",
+        title: "Bookings",
+        path: "/bookings",
     },
     {
-        title: "Contact",
-        path: "#contact",
+        title: "Chat",
+        path: "/chat",
     },
+];
 
+const userData = [
+    {
+        id: "",
+        pp: "/images/teste.jpeg"
+    }
 ];
 
 const AuthNavbar = () => {
-const [navbarOpen, setNavbarOpen] = useState(false);
-const { data: session } = useSession();
-const firstName = session ? session.user.name.split(' ')[0] : '';
-const handleLoginButtonClick = () => {
-    window.location.href = "/login"; 
-};    
+    const [navbarOpen, setNavbarOpen] = useState(false);
+    const { data: session } = useSession();
+    const firstName = session ? session.user.name.split(' ')[0] : '';
+    const handleLoginButtonClick = () => {
+        window.location.href = "/login";
+    };
 
     return (
         <nav className='fixed mx-auto border-b border-l-transparent border-t-transparent top-0 left-0 right-0 z-20 bg-white opacity-100'>
@@ -73,16 +78,20 @@ const handleLoginButtonClick = () => {
                         )}
                     </div>
                     <div className='flex flex-row'>
-                    {session ? (
-                        <span className='hidden md:flex text-xl font-customFont3 mt-6 mr-4'>Hello, {firstName}</span>
-                    ) : (
-                        <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
-                            Login
-                        </button>
-                    )}
-                    <div>
-                        <ProfileIcon />
-                    </div>
+                        {session ? (
+                            <span className='hidden md:flex text-xl font-customFont3 mt-6 mr-4'>Hello, {firstName}</span>
+                        ) : (
+                            <button onClick={handleLoginButtonClick} id='loginbtn' className='bg-[#17a2b8] hover:bg-[#468089] rounded-md text-white font-semibold w-36 p-1'>
+                                Login
+                            </button>
+                        )}
+                        {session && (
+                            <div>
+                                <ProfileIcon
+                                    profilePicture={userData[0].pp} // Assuming pp is the prop for profile picture URL
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

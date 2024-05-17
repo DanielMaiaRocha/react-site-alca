@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import CardTag from './CardTag';
 import Card from './Card';
+import InputTag from './InputTag';
+import  Link  from 'next/link';
 
 const projectsData =  [
   {
@@ -69,6 +71,16 @@ const projectsData =  [
   
 },
 
+{
+  id: "7",
+  title:"Daniel ",
+  description:"Teste 2",
+  image:"/images/teste.jpeg",
+  lang:"Portugês",
+  country:"Brasil",
+  tag:["All", "Dubbing Operator"],
+}
+
   
 ]
 
@@ -87,7 +99,7 @@ return (
       <h2 className=' text-center ml-10 text-4xl font-bold text-black mt-10 mb-10'>
           Professionals
       </h2>
-      <div className='text-white flex flex-row justify-center itens-center gap-6 py-6 mb-10 ml-2 border '>
+      <div className='text-white md:flex flex-row justify-center itens-center gap-6 py-6 mb-10 ml-10 hidden border w-96 md:w-[110rem]'>
         <CardTag
           onClick={handleTagChange} 
           name="All" 
@@ -123,16 +135,24 @@ return (
           name="Dubbing Operator" 
           isSelected={tag === "Dubbing Operator"}
         />
+        <InputTag 
+          onClick={handleTagChange}
+        />
+        
+        {/*<input type="search" className='border border-slate-500 rounded-lg w-96 decoration-none p-2 text-black' placeholder='Search here!'/>*/}
       </div>
+        
       <div className='grid md:grid-cols-1 gap-8 md:gap-12 mb-10'>{filteredProject.map((project) =>
-      <Card
-          key={project.id} 
-          title={project.title} 
-          description={project.description} 
-          imgUrl={project.image}
-          lang={project.lang}
-          country={project.country}
-          />
+        <Link key={project.id} href={`/card/${project.id}`}>
+              <Card
+                  id={project.id}
+                  title={project.title} 
+                  description={project.description} 
+                  imgUrl={project.image}
+                  lang={project.lang}
+                  country={project.country}
+              />
+        </Link>
       )}
       </div>
   </>
