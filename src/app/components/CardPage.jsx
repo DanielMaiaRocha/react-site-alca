@@ -172,7 +172,7 @@ const CardPage = () => {
             
             <div id="right" className='flex flex-col flex-initial border border-[lightgray] p-5 rounded-md gap-5 sticky top-40 max-h-[350px]'>
                 <div id="price" className='flex gap-72'>
-                    <h2 className='text-lg font-semibold'>Let's Talk!</h2>
+                    <h2 className='text-lg font-semibold'>Let&apos;s Talk!</h2>
                     <h3 className='text-lg font-semibold'>$50/hr</h3>
                 </div>
                 <p className='text-lg font-light text-[#555]'>Come talk to me and booking a date, im sure i will enjoy working on your project</p>
