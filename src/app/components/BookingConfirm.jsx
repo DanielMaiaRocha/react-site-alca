@@ -58,11 +58,11 @@ const BookingConfirm = () => {
                 </tr>
                 <tr className='h-12'>
                     <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
+                        <Image src={"/images/profile-bg.png"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
                     </td>
-                    <td>Seven Deadly Sins</td>
+                    <td>Teste 1</td>
                     <td>50/hr</td>
-                    <td>20/05/2024</td>
+                    <td>02/08/2024</td>
                     <td className='w-12 h-7 '>
                         <div className='flex flex-row justify-center items-center mr-10 gap-5 w-24'>
                             <button id="checkBtn"><Image src={"/images/checkbtn.png"} alt='/' width={25} height={25}/></button>
@@ -70,67 +70,6 @@ const BookingConfirm = () => {
                         </div>
                     </td>
                 </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                    <div className='flex flex-row justify-center items-center mr-10 gap-5 w-24'>
-                            <button><Image src={"/images/checkbtn.png"} alt='/' width={25} height={25}/></button>
-                            <button><Image src={"/images/declinebtn.png"} alt='/' width={25} height={25}/></button>
-                        </div>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <div className='flex flex-row justify-center items-center mr-10 gap-5 w-24'>
-                            <button><Image src={"/images/checkbtn.png"} alt='/' width={25} height={25}/></button>
-                            <button><Image src={"/images/declinebtn.png"} alt='/' width={25} height={25}/></button>
-                        </div>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <div className='flex flex-row justify-center items-center gap-5 w-24'>
-                            <button><Image src={"/images/checkbtn.png"} alt='/' width={25} height={25}/></button>
-                            <button><Image src={"/images/declinebtn.png"} alt='/' width={25} height={25}/></button>
-                        </div>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <div className='flex flex-row justify-center items-center mr-10 gap-5 w-24'>
-                            <button><Image src={"/images/checkbtn.png"} alt='/' width={25} height={25}/></button>
-                            <button><Image src={"/images/declinebtn.png"} alt='/' width={25} height={25}/></button>
-                        </div>
-                    </td>
-                </tr>
-                <br />
             </table>
             <div className='flex flex-row items-center justify-center'>
                 <div className='flex gap-3'>
@@ -140,10 +79,14 @@ const BookingConfirm = () => {
                 </div>
             </div>
         </div>
-        <div class="popup-overlay" id="popupOverlay" className='hidden fixed left-0 top-0 w-full h-full z-[999]' ></div>
-            <div class="popup" id="popup" className='hidden fixed justify-center items-center top-1/2 translate-[50% 50%] p-5 bg-white border border-black z-[1000]'>
-            <p>Este é um pop-up!</p>
-            <button class="close-popup" id="closePopup" className='cursor-pointer mt-2'>Fechar</button>
+        <div class="popup-overlay" id="popupOverlay" className='hidden fixed left-0 top-0 w-[400px] h-full z-[999]' ></div>
+            <div class="popup" id="popup" className='hidden fixed justify-center items-center top-96 translate-[50% 50%] p-5 bg-white border rounded z-[1000]'>
+            <p>Accept this Boking?</p>
+            <div className='flex justify-center items-center gap-10 mt-2 mb-2'>
+                <button>Yes</button>
+                <button>No</button>
+            </div>
+            <button class="close-popup" id="closePopup" className='cursor-pointer mt-2 ml-10 bg-[#17a2b8] rounded text-white p-2'>Fechar</button>
         </div>
     </div>
   )

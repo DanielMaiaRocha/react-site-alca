@@ -1,16 +1,17 @@
-import User from "@/app/models/User"
+import User from '@/app/models/User'
 import NextAuth from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import connect from "@/app/utils/db";
+import CredentialsProvider from "next-auth/providers/credentials";
+import connect from '@/app/utils/db';
+
 
 const options = NextAuth({
-  providers: [
-    CredentialsProvider({
-      id: "Credentials",
-      name: "Credentials",
-      async authorize(credentials) {
-        await connect();
+    providers: [
+      CredentialsProvider({
+        id: "Credentials",
+        name: "Credentials",
+        async authorize(credentials) {
+          await connect();
 
         try {
           const user = await User.findOne({

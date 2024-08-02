@@ -7,15 +7,15 @@ import BookingConfirm from '../components/BookingConfirm'
 
 const page = () => {
   return (
-    <LayoutAdmin> 
+    <>
       <main className='min-h-screen flex justify-center pt-6'>
         <link rel="icon" href="/images/logo.png" sizes="any" />    
           <AuthNavbar />
           <BookingConfirm />
         </main>
         <Footer />
+    </>  
       
-      </LayoutAdmin>
   )
 }
 

@@ -1,46 +1,42 @@
 import mongoose from 'mongoose';
+import { number } from 'yup';
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-    username:{
+    apointID:{
         type:String,
         required:true,
         unique:true
     },
-    email:{
+    userId:{
         type:String,
         required:true,
         unique:true
     },
-    password:{
-        type:String,
-        required:true,
-    },
-    img:{
+    sellerId:{
         type:String,
         required:false,
     },
-    video:{
+    sellerImg:{
         type:String,
         required:false,
     },
-    country:{
-        type:String,
-        required:true,
-    },
-    language:{
-        type:String,
-        required:true,
-    },
-    description:{
-        type:String,
-        required:false,
-    },
-    isSeller:{
+    isAccepted:{
         type:Boolean,
-        default:false,
+        required:false,
     },
-
+    isRejected:{
+        type:Boolean,
+        required:false,
+    },
+    price:{
+        type:Number,
+        required:true,
+    },
+    production:{
+        type:String,
+        required:true,
+    },
 },{
     timestamps: true
 });

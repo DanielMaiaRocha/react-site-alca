@@ -25,59 +25,11 @@ const BookingPage = () => {
                 </tr>
                 <tr className='h-12'>
                     <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
+                        <Image src={"/images/profile-bg.png"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
                     </td>
-                    <td>Seven Deadly Sins</td>
+                    <td>Teste 1</td>
                     <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <button><Image src={"/images/message.png"} alt='/' width={25} height={25}/></button>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <button><Image src={"/images/message.png"} alt='/' width={25} height={25}/></button>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <button><Image src={"/images/message.png"} alt='/' width={25} height={25}/></button>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12 '>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <button><Image src={"/images/message.png"} alt='/' width={25} height={25}/></button>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-2'>
-                        <Image src={"/images/teste.jpeg"} alt='/' width={50} height={80} className='rounded-full w-12  object-cover'/>
-                    </td>
-                    <td>Seven Deadly Sins</td>
-                    <td>50/hr</td>
-                    <td>20/05/2024</td>
+                    <td>02/08/2024</td>
                     <td className='w-12 h-7'>
                         <button><Image src={"/images/message.png"} alt='/' width={25} height={25}/></button>
                     </td>

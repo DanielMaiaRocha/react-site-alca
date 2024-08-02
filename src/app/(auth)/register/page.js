@@ -6,10 +6,10 @@ import React from 'react'
 const page = () => {
   return (
     <main>
-    <link rel="icon" href="/images/logo.png" sizes="any" />
-        <Navbar />
-        <CadastroForm />
-        <Footer />
+      <link rel="icon" href="/images/logo.png" sizes="any" />
+          <Navbar />
+          <CadastroForm />
+          <Footer />
     </main>
   )
 }

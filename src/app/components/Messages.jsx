@@ -11,7 +11,7 @@ const Messages = () => {
         isSeller: true
     }
 
-    const message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse totam nisi assumenda, numquam dolores quidem eveniet explicabo, animi, ab asperiores repellendus! Iste provident mollitia dignissimos repellendus laborum quis eum possimus.'
+    const message = 'Teste1'
   return (
     <div id='bookings' className='mt-20 flex justify-center'>
         <div id="container" className='w-[1400px] py-12 px-12'>
@@ -32,58 +32,11 @@ const Messages = () => {
                 </tr>
                 <tr className='h-12'>
                     <td className='p-3'>
-                        Patricia Zap
+                        Daniel teste
                     </td>
                     <td className='max-w-72 p-2 mx-auto text-sm text-[#555]'>{message}</td>
-                    <td>Seven Deadly Sins</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <Link href={'/chat'}><Image src={"/images/message.png"} alt='/' width={25} height={25}/></Link>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-3'>
-                        Patricia Zap
-                    </td>
-                    <td className='max-w-72 p-2 mx-auto text-sm text-[#555]'>{message}</td>
-                    <td>Seven Deadly Sins</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <Link href={'/chat'}><Image src={"/images/message.png"} alt='/' width={25} height={25}/></Link>                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-3'>
-                        Patricia Zap
-                    </td>
-                    <td className='max-w-72 p-2 mx-auto text-sm text-[#555]'>{message}</td>
-                    <td>Seven Deadly Sins</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <Link href={'/chat'}><Image src={"/images/message.png"} alt='/' width={25} height={25}/></Link>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-3'>
-                        Patricia Zap
-                    </td>
-                    <td className='max-w-72 p-2 mx-auto text-sm text-[#555]'>{message}</td>
-                    <td>Seven Deadly Sins</td>
-                    <td>20/05/2024</td>
-                    <td className='w-12 h-7'>
-                        <Link href={'/chat'}><Image src={"/images/message.png"} alt='/' width={25} height={25}/></Link>
-                    </td>
-                </tr>
-                <br />
-                <tr className='h-12'>
-                    <td className='p-3'>
-                        Patricia Zap
-                    </td>
-                    <td className='max-w-72 p-2 mx-auto text-sm text-[#555]'>{message}</td>
-                    <td>Seven Deadly Sins</td>
-                    <td>20/05/2024</td>
+                    <td>Teste produção</td>
+                    <td>02/08/2024</td>
                     <td className='w-12 h-7'>
                         <Link href={'/chat'}><Image src={"/images/message.png"} alt='/' width={25} height={25}/></Link>
                     </td>

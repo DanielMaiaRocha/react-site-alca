@@ -14,12 +14,20 @@ const cardSchema = new Schema({
     type:String,
     required:true
   },
-  cat:{
-    type:String,
-    required:true
+  totalRating:{
+    type:Number,
+    default:0,
+  },
+  starNumber:{
+    type:Number,
+    default:0,
   },
   price:{
     type:Number,
+    required:true
+  },
+  cat:{
+    type:String,
     required:true
   },
   cover:{
@@ -38,11 +46,19 @@ const cardSchema = new Schema({
     type:String,
     required:true
   },
+  reponseTime:{
+    type:Number,
+    required:false
+  },
   country:{
-    type:[String],
+    type:String,
     required:false
   },
   lang:{
+    type:String,
+    required:false
+  },
+  features:{
     type:[String],
     required:false
   },
