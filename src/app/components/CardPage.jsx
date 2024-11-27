@@ -8,11 +8,11 @@ const CardPage = () => {
         <div id="container" className='w-[1400px] pt-8 pb-0 gap-12 flex flex-wrap'>
             <div id="left" className='flex flex-col flex-none gap-5'>
                 <span className='font-semibold text-sm text-[#555]'>DUBBER / Dubbing Actor</span>
-                <h1 className='font-bold text-2xl '>Flavia Saddy</h1>
+                <h1 className='font-bold text-2xl '>Ashley Davis</h1>
                 <div>
                    <div className='flex gap-3 items-center pb-3'>
                         <Image 
-                            src={"/images/flavia.jpg"}
+                            src={"/images/w2.jpg"}
                             alt='/'
                             width={250}
                             height={250}
@@ -32,19 +32,19 @@ const CardPage = () => {
                         <source src='/video/videobg.mp4' />
                     </video> 
                     <h2 className='py-4 font-semibold text-lg'>About me</h2>
-                    <p className='font-light text-md text-[#555] leading-6 max-w-[36rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laborum assumenda in necessitatibus quaerat obcaecati nobis itaque deleniti sed laboriosam eum delectus dolorum, eos inventore velit. Ut magni suscipit iste?</p>     
+                    <p className='font-light text-md text-[#555] leading-6 max-w-[36rem]'>I’m Ashley Cooper, a voice actress from the U.S. I specialize in bringing animated characters to life across TV shows, video games, and audiobooks with my versatile voice.</p>     
                     <div id='seller' className='mt-12 flex flex-col gap-3  w-[32rem]'>
                         <h2 className='font-semibold text-lg'>About the professional</h2>
                         <div className='flex items-center gap-5'>
                             <Image 
-                                src={"/images/flavia.jpg"}
+                                src={"/images/w2.jpg"}
                                 alt='/'
                                 width={250}
                                 height={250}
                                 className='rounded-full w-24 h-24 object-cover items-center'
                             />
                             <div className='flex flex-col gap-3'>
-                                <h1 className='font-semibold text-md'>Flavia Saddy</h1>
+                                <h1 className='font-semibold text-md'>Ashley Cooper</h1>
                                 <div id='stars' className='flex flex-row gap-1'>
                                     <Image src={"/images/star.png"} alt='/' width={20} height={20}/>
                                     <Image src={"/images/star.png"} alt='/' width={20} height={20}/>
@@ -62,7 +62,7 @@ const CardPage = () => {
                     <div id="items" className='flex flex-wrap justify-between'>
                         <div id='item' className='flex flex-col w-72 gap-2 mb-3'>
                             <span id='title' className='text-md text-[gray]'>From</span>
-                            <span id='desc' className='font-semibold text-md'>Brasil</span>
+                            <span id='desc' className='font-semibold text-md'>USA</span>
                         </div>
                         <div id='item' className='flex flex-col w-72 gap-2 mb-3'>
                             <span id='title' className='text-md text-[gray]'>Years of Experience</span>
@@ -70,7 +70,7 @@ const CardPage = () => {
                         </div>
                         <div id='item' className='flex flex-col w-72 gap-2 mb-3'>
                             <span id='title' className='text-md text-[gray]'>Language</span>
-                            <span id='desc' className='font-semibold text-md'>Portugues</span>
+                            <span id='desc' className='font-semibold text-md'>English</span>
                         </div>
                         <div id='item' className='flex flex-col w-72 gap-2 mb-3'>
                             <span id='title' className='text-md text-[gray]'>Avg. response time</span>
@@ -78,7 +78,7 @@ const CardPage = () => {
                         </div>
                     </div>
                     <hr className='h-0 border border-[lightgray] mb-2'/>
-                    <p className='mt-2 text-[#555]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi odio hic assumenda laudantium, nostrum ex officiis mollitia odit laboriosam molestiae doloribus voluptas nulla beatae atque pariatur dicta unde. Nostrum, voluptate?</p>
+                    <p className='mt-2 text-[#555]'>I’m Ashley Cooper, a voice actress from the U.S. I’m thrilled to bring animated characters to life across TV shows, video games, and audiobooks with my versatile voice. I’m eager to collaborate and create something extraordinary together</p>
                 </div>
                 <div id="reviews" className='flex flex-col mt-14 mb-20'>
                     <h2 className='font-semibold text-2xl'>Reviews</h2>
@@ -86,14 +86,14 @@ const CardPage = () => {
                     <div id="item" className='flex flex-col gap-5 mt-5 mb-5'>
                         <div id="user" className='flex items-center gap-3'>
                             <Image 
-                                src={"/images/Briggs.jpg"} 
+                                src={"/images/teste.jpeg"} 
                                 alt='/' 
                                 width={350} 
                                 height={350}  
                                 className='h-14 w-14 rounded-full object-cover'
                             />
                             <div id="info">
-                                <span className='font-semibold'>Anderson Rocha</span>
+                                <span className='font-semibold'>Daniel R.</span>
                                 <div id="country" className='flex items-center gap-2 text-[gray]'>
                                     <Image src={"/images/brazil.svg"} alt='/' width={30} height={30} className='w-5' />
                                     <span>Brasil</span>
@@ -108,23 +108,23 @@ const CardPage = () => {
                                 <Image src={"/images/star.png"} alt='/' width={20} height={20}/>
                                 <span className='font-semibold text-[#ffc108]'>5</span>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptates impedit doloribus veniam in quas nihil.</p>
+                        <p>It was a plasure work with a such Dubbing Actriss</p>
                     </div>
                     <hr />
                     <div id="item" className='flex flex-col gap-5 mt-5 mb-5'>
                         <div id="user" className='flex items-center gap-3'>
                             <Image 
-                                src={"/images/Briggs.jpg"} 
+                                src={"/images/h2.jpg"} 
                                 alt='/' 
                                 width={350} 
                                 height={350}  
                                 className='h-14 w-14 rounded-full object-cover'
                             />
                             <div id="info">
-                                <span className='font-semibold'>Anderson Rocha</span>
+                                <span className='font-semibold'>Samir Maluf</span>
                                 <div id="country" className='flex items-center gap-2 text-[gray]'>
-                                    <Image src={"/images/brazil.svg"} alt='/' width={30} height={30} className='w-5' />
-                                    <span>Brasil</span>
+                                    <Image src={"/images/saudi.svg"} alt='/' width={30} height={30} className='w-5' />
+                                    <span>Saudi Arabia</span>
                                 </div>
                             </div>
                         </div>
@@ -136,23 +136,23 @@ const CardPage = () => {
                                 <Image src={"/images/star.png"} alt='/' width={20} height={20}/>
                                 <span className='font-semibold text-[#ffc108]'>5</span>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptates impedit doloribus veniam in quas nihil.</p>
+                        <p>Great dubbing atress, cant wait to work more with her</p>
                     </div>
                     <hr />
                     <div id="item" className='flex flex-col gap-5 mt-5 mb-5'>
                         <div id="user" className='flex items-center gap-3'>
                             <Image 
-                                src={"/images/Briggs.jpg"} 
+                                src={"/images/w1.jpg"} 
                                 alt='/' 
                                 width={350} 
                                 height={350}  
                                 className='h-14 w-14 rounded-full object-cover'
                             />
                             <div id="info">
-                                <span className='font-semibold'>Anderson Rocha</span>
+                                <span className='font-semibold'>Klelia Demetriou</span>
                                 <div id="country" className='flex items-center gap-2 text-[gray]'>
-                                    <Image src={"/images/brazil.svg"} alt='/' width={30} height={30} className='w-5' />
-                                    <span>Brasil</span>
+                                    <Image src={"/images/greece.svg"} alt='/' width={30} height={30} className='w-5' />
+                                    <span>Greece</span>
                                 </div>
                             </div>
                         </div>
@@ -164,7 +164,7 @@ const CardPage = () => {
                                 <Image src={"/images/star.png"} alt='/' width={20} height={20}/>
                                 <span className='font-semibold text-[#ffc108]'>5</span>
                         </div>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, voluptates impedit doloribus veniam in quas nihil.</p>
+                        <p>We spend a good time working on our last project!</p>
                     </div>
                 </div>
                 <hr />
