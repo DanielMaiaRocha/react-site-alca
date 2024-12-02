@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 import CardSection from "../components/CardSection";
 
 function Page() {
-  const { data: session } = useSession(); // Obtém os dados da sessão
-  const token = session?.accessToken; // Extrai o token da sessão, se existir
+  const { data: session } = useSession(); 
+  const token = session?.accessToken; 
 
   return (
     <LayoutAdmin>
@@ -18,8 +18,7 @@ function Page() {
         <AuthNavbar />
         <HeroMainPage />
       </main>
-      {/* Passa o token para o componente CardSection */}
-      <CardSection token={token} />
+      <CardSection  />
       <Footer />
     </LayoutAdmin>
   );

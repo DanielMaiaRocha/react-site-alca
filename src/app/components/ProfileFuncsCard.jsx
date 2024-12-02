@@ -28,7 +28,7 @@ const ProfileFuncsDub = () => {
           </svg>
           <span className="text-xl p-1">My Profile</span>
         </Link>
-        <Link href={"/myCard"} className={inactiveLink}>
+        <Link href={"/myCard"} className={activeLink}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -40,6 +40,7 @@ const ProfileFuncsDub = () => {
               id="SVGRepo_tracerCarrier"
               stroke-linecap="round"
               stroke-linejoin="round"
+              class="w-7 h-7"
             ></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
@@ -48,6 +49,7 @@ const ProfileFuncsDub = () => {
                 stroke="#000000"
                 stroke-width="1.5"
                 stroke-linecap="round"
+                class="w-7 h-7"
               ></path>{" "}
               <path
                 d="M10 16H6"
@@ -61,18 +63,20 @@ const ProfileFuncsDub = () => {
                 stroke="#000000"
                 stroke-width="1.5"
                 stroke-linecap="round"
+                class="w-7 h-7"
               ></path>{" "}
               <path
                 d="M2 10L7 10M22 10L11 10"
                 stroke="#000000"
                 stroke-width="1.5"
                 stroke-linecap="round"
+                class="w-7 h-7"
               ></path>{" "}
             </g>
           </svg>
           <span className="text-xl p-1">My Card</span>
         </Link>
-        <Link href={"/dubsol"} className={activeLink}>
+        <Link href={"/dubsol"} className={inactiveLink}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

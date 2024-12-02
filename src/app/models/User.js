@@ -19,7 +19,15 @@ const userSchema = new Schema(
     },
     isSeller: { 
       type: Boolean, 
-      default: false 
+      default: false
+    },
+    lang: {
+      type: String,
+      default: "",
+    },
+    country: {
+      type: String,
+      default: "",
     },
   },
   { timestamps: true }

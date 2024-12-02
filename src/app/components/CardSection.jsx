@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from "react";
 import CardTag from "./CardTag";
 import Card from "./Card";
-import InputTag from "./InputTag";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
-const CardSection = ({ token }) => { // Recebe o token como prop
+const CardSection = () => {
   const [tag, setTag] = useState("All");
   const [projectsData, setProjectsData] = useState([]);
+  const { data: session } = useSession();
 
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch("http://localhost:8800/api/cards", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Adiciona o token no cabeçalho
-          },
-        });
+        const response = await fetch("http://localhost:8800/api/cards");
         const data = await response.json();
         setProjectsData(data);
       } catch (error) {
@@ -23,76 +20,49 @@ const CardSection = ({ token }) => { // Recebe o token como prop
       }
     };
 
-    if (token) { // Garante que a API só é chamada se o token existir
-      fetchCards();
-    }
-  }, [token]);
+    fetchCards();
+  }, []);
 
-  // Filtragem de cards (pode manter a lógica atual)
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
 
-  const filteredProject = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  // Filtragem dos cards
+  const filteredProjects = projectsData.filter((project) => {
+    return tag === "All" || (project.role && project.role.includes(tag));
+  });
 
   return (
     <>
       <h2 className="text-center ml-10 text-4xl font-bold text-black mt-10 mb-10">
         Professionals
       </h2>
-      {/* Renderização da seção de tags */}
       <div className="text-white md:flex flex-row justify-center items-center gap-6 py-6 mb-10 ml-10 hidden border w-96 md:w-[110rem]">
-        {/* Seus componentes de tag */}
-        <CardTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Dubbing Actor"
-          isSelected={tag === "Dubbing Actor"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Dubbing Director"
-          isSelected={tag === "Dubbing Director"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Project Menager"
-          isSelected={tag === "Project Menager"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Revisor"
-          isSelected={tag === "Revisor"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Translator"
-          isSelected={tag === "Translator"}
-        />
-        <CardTag
-          onClick={handleTagChange}
-          name="Dubbing Operator"
-          isSelected={tag === "Dubbing Operator"}
-        />
-        <InputTag onClick={handleTagChange} />
+        {["All", "Dubbing Actor", "Dubbing Director", "Project Manager", "Revisor", "Translator", "Dubbing Operator"].map((tagName) => (
+          <CardTag
+            key={tagName}
+            onClick={() => handleTagChange(tagName)}
+            name={tagName}
+            isSelected={tag === tagName}
+          />
+        ))}
       </div>
 
-      {/* Renderização dos cards filtrados */}
+      {/* Renderização dos cards */}
       <div className="grid md:grid-cols-1 gap-8 md:gap-12 mb-10">
-        {filteredProject.map((project) => (
-          <Link key={project.id} href={`/card/${project.id}`}>
+        {filteredProjects.map((project) => (
+          <Link key={project._id} href={`/card/${project._id}`} aria-label={`View details of ${project.title}`}>
+
             <Card
-              id={project.id}
+              id={project.userId}
               title={project.title}
+              price={project.price}
+              starNumber={project.starNumber}
+              totalStars={project.totalStars}
+              tag={project.tag}
               role={project.role}
-              description={project.description}
-              imgUrl={project.image}
+              description={project.desc}
+              cover={project.cover}
               lang={project.lang}
               country={project.country}
             />

@@ -5,9 +5,10 @@ import connect from "@/app/utils/db";
 import mongoose from "mongoose";
 
 await connect();
+
 export async function POST(req) {
   try {
-    const { name, email, password} = await req.json();
+    const { name, email, password, lang, country, isSeller } = await req.json();
 
     const emailExists = await User.findOne({ email });
 
@@ -18,12 +19,16 @@ export async function POST(req) {
       });
     }
 
+
     const hashedPassword = await bcrypt.hash(password, 5);
 
     const newUser = new User({
       name,
       email,
       password: hashedPassword,
+      isSeller: isSeller || false,  
+      lang: lang || "",             
+      country: country || "",      
     });
 
     await newUser.save();

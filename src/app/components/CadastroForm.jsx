@@ -9,14 +9,13 @@ import * as Yup from 'yup';
 import { useRouter } from 'next/navigation';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { signIn, useSession } from 'next-auth/react';
-import CustomAlert from './CustomAlert';
 
 const CadastroForm = () => {
   const [error, setError] = useState("");
   const [isFormSubmitting, setFormSubmitting] = useState(false);
   const router = useRouter();
   const { status } = useSession();
- 
+
   useEffect(() => {
     if (status === "authenticated") {
       router.push("mainPage");
@@ -32,6 +31,9 @@ const CadastroForm = () => {
     email: "",
     password: "",
     passwordMatch: "",
+    isSeller: false, // valor inicial de isSeller
+    lang: "",  // campo de idioma
+    country: ""  // campo de país
   };
 
   const validationSchema = Yup.object().shape({
@@ -63,6 +65,9 @@ const CadastroForm = () => {
           name: values.name,
           email: values.email,
           password: values.password,
+          isSeller: values.isSeller, // Envia o valor de isSeller
+          lang: values.lang || "",  // Envia lang, mesmo se estiver vazio
+          country: values.country || "" // Envia country, mesmo se estiver vazio
         }),
       });
 
@@ -102,7 +107,7 @@ const CadastroForm = () => {
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ values }) => (
+        {({ values, handleChange, handleBlur, setFieldValue }) => (
           <Form
             noValidate
             className='flex flex-col gap-2 p-4 rounded-md border border-zinc-300 max-w-[500px] md:w-full md:h-auto mt-20 bg-white'
@@ -119,6 +124,39 @@ const CadastroForm = () => {
             <LoginInput name="email" type="email" placeholder="Your best e-mail" required />
             <LoginInput name="password" type="password" placeholder="A password that you will remember!" required />
             <LoginInput name="passwordMatch" type="password" label="Confirm your password" placeholder="Confirm your password" required />
+
+            {/* Checkbox para isSeller */}
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                name="isSeller"
+                checked={values.isSeller}
+                onChange={handleChange}  // Atualiza o valor diretamente no Formik
+                className="form-checkbox h-5 w-5 text-blue-500 border-gray-300 rounded"
+              />
+              <span className="text-md text-zinc-700 text-lg font-bold">Are you a seller?</span>
+            </div>
+
+            {/* Campos adicionais para lang e country */}
+            <LoginInput
+              name="lang"
+              label="Native Language"
+              placeholder="Language"
+              value={values.lang}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
+            />
+            <LoginInput
+              name="country"
+              label="Native Country"
+              placeholder="Country"
+              value={values.country}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              required
+            />
+
             <ButtonLogin
               type="submit"
               text={isFormSubmitting ? <AiOutlineLoading3Quarters className="animate-spin mr-2 w-9 h-9 font-bold" /> : "Register"}
